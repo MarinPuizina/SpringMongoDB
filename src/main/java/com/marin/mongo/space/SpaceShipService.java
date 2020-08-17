@@ -20,8 +20,8 @@ public class SpaceShipService {
     public List<SpaceShip> allSpacesShips() {
 
         Query query = new Query()
-                .addCriteria(Criteria.where("Type").is("Ship A"))
-                .with(Sort.by(Sort.Order.desc("Type")))
+                .addCriteria(Criteria.where("type").is("Ship A"))
+                .with(Sort.by(Sort.Order.desc("engines")))
                 .limit(2);
 
         return mongoTemplate.find(query, SpaceShip.class);
