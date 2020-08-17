@@ -12,6 +12,9 @@ class SpaceShipRepositoryTest {
     @Autowired
     SpaceShipRepository spaceShipRepository;
 
+    @Autowired
+    SpaceShipService spaceShipService;
+
     @Test
     public void createRows() {
 
@@ -21,10 +24,14 @@ class SpaceShipRepositoryTest {
         spaceShipRepository.save(new SpaceShip(null, "Ship A", 1));
         spaceShipRepository.save(new SpaceShip(null, "Ship A", 2));
         spaceShipRepository.save(new SpaceShip(null, "Ship A", 3));
-        spaceShipRepository.save(new SpaceShip(null, "Ship B", 4));
-        spaceShipRepository.save(new SpaceShip(null, "Ship C", 5));
+        spaceShipRepository.save(new SpaceShip(null, "Ship A", 4));
+        spaceShipRepository.save(new SpaceShip(null, "Ship B", 5));
+        spaceShipRepository.save(new SpaceShip(null, "Ship C", 6));
+        spaceShipRepository.save(new SpaceShip(null, "Ship D", 7));
 
-        spaceShipRepository.findAll().forEach(System.out::println);
+        //spaceShipRepository.findAll().forEach(System.out::println);
+
+        spaceShipService.allSpacesShips().forEach(System.out::println);
 
     }
 
