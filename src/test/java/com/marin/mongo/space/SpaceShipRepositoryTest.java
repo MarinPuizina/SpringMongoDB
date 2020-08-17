@@ -19,10 +19,10 @@ class SpaceShipRepositoryTest {
         spaceShipRepository.deleteAll();
 
         spaceShipRepository.save(new SpaceShip(null, "Ship A", 1));
-        spaceShipRepository.save(new SpaceShip(null, "Ship B", 2));
-        spaceShipRepository.save(new SpaceShip(null, "Ship C", 3));
-        spaceShipRepository.save(new SpaceShip(null, "Ship D", 4));
-        spaceShipRepository.save(new SpaceShip(null, "Ship E", 5));
+        spaceShipRepository.save(new SpaceShip(null, "Ship A", 2));
+        spaceShipRepository.save(new SpaceShip(null, "Ship A", 3));
+        spaceShipRepository.save(new SpaceShip(null, "Ship B", 4));
+        spaceShipRepository.save(new SpaceShip(null, "Ship C", 5));
 
         spaceShipRepository.findAll().forEach(System.out::println);
 
