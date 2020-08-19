@@ -30,4 +30,18 @@ class SpaceShipRepositoryQueryTest {
 
     }
 
+    @Test
+    public void testDeleteShipsStartWithB() {
+
+        List<SpaceShip> spaceships = spaceShipRepository.deleteShipsStartWithB();
+        spaceships.forEach(s -> System.out.println("Deleted ship: " + s));
+
+        List<SpaceShip> all = spaceShipRepository.findAll();
+
+        for (SpaceShip spaceShip : all) {
+            System.out.println("Existing spaceship: " + spaceShip);
+        }
+
+    }
+
 }

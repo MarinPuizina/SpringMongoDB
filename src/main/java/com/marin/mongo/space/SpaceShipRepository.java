@@ -15,7 +15,7 @@ public interface SpaceShipRepository extends MongoRepository<SpaceShip, String> 
     public List<SpaceShip> getShipsStartWithS();
 
 
-    @Query(value = "{'type': {$regex: '^S.*'} }", delete = true)
+    @Query(value = "{'type': {$regex: '^B.*'} }", delete = true)
     public List<SpaceShip> deleteShipsStartWithB();
 
 }
