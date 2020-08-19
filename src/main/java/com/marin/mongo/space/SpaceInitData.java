@@ -8,7 +8,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-public class InitData {
+public class SpaceInitData {
 
     private final SpaceShipRepository spaceShipRepository;
 
