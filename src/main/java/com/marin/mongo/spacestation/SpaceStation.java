@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class SpaceStation {
     private String marinsid;
     private String name;
     private Integer crew;
+    @DBRef
     private List<SpaceShip> dockedShips;
 
 }
