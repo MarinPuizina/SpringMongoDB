@@ -21,6 +21,7 @@ public class SpaceStationInitData {
         List<SpaceShip> spaceStationsWithB = spaceShipRepository.getShipsStartWithB();
         List<SpaceShip> spaceStationsWithS = spaceShipRepository.getShipsStartWithS();
 
+        spaceStationRepository.deleteAll();
         spaceStationRepository.saveAll(
           List.of(
                   new SpaceStation(null, "Ganymide", 40000, spaceStationsWithB),
